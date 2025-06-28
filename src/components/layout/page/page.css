@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.page-wrapper {
+  @apply relative;
+}
