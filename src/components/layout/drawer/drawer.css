@@ -1,0 +1,17 @@
+@reference 'tailwindcss';
+
+.drawer {
+  @apply fixed z-20 border-l border-neutral-200 inset-y-0 right-0  w-full max-w-[300px] px-4 py-8 h-screen transition-transform duration-300;
+
+  &[data-drawer-toggle="inactive"] {
+    @apply bg-white translate-x-full ease-in;
+  }
+
+  &[data-drawer-toggle="active"] {
+    @apply bg-neutral-100 translate-x-0 ease-out;
+  }
+}
+
+.drawer-navigation {
+  @apply flex flex-col gap-y-4;
+}

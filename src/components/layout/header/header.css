@@ -1,5 +1,21 @@
 @reference "tailwindcss";
 
 .header {
-  @apply relative;
+  @apply w-full bg-neutral-100;
+}
+
+.header-container {
+  @apply flex justify-between items-center py-2;
+}
+
+.header-logo {
+  @apply flex h-8 fill-emerald-500;
+}
+
+.header-navigation {
+  @apply flex-1 flex gap-x-8 p-3 justify-center items-center;
+}
+
+.header-navigation-item {
+  @apply text-sm font-semibold tracking-wider uppercase;
 }
