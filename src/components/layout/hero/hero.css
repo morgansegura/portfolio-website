@@ -1,7 +1,11 @@
 @reference "tailwindcss";
 
+.hero-section {
+  @apply relative bg-linear-to-br from-emerald-600 via-blue-900 to-blue-600;
+}
+
 .hero {
-  @apply grid flex-1  border rounded-xl border-white/15 bg-slate-950/25 shadow-xl gap-12 py-20 px-4 my-10 lg:grid-cols-2 lg:gap-24 lg:py-40 lg:px-8 lg:my-24;
+  @apply relative grid flex-1 items-center border rounded-xl border-white/15 bg-slate-950/25 shadow-xl gap-1 py-20 px-4 my-10 lg:grid-cols-2 lg:gap-24 lg:py-40 lg:px-8 lg:my-24;
 }
 
 .hero .column {
@@ -9,26 +13,22 @@
 }
 
 .hero .heading {
-  @apply relative drop-shadow-xl tracking-tight font-semibold text-neutral-700;
+  @apply relative text-center lg:text-left drop-shadow-xl tracking-tight text-5xl md:text-6xl uppercase;
 
   span.mo {
-    @apply absolute -top-6.5 left-4.5 px-2 py-0.5 rounded-br-xl flex items-center gap-x-0.5 rounded-tl-xl text-shadow-lg text-shadow-white border-2 border-white text-indigo-700 font-bold uppercase text-xl tracking-tighter bg-cyan-500 bg-linear-to-bl from-indigo-200 via-indigo-100 to-white;
-
-    svg {
-      @apply h-5;
-    }
+    @apply text-emerald-100 font-thin uppercase;
   }
 
   span.segura {
-    @apply relative text-white leading-26 text-[100px] sm:text-[140px];
+    @apply relative text-white font-bold;
   }
 }
 
 .hero .social-media {
-  @apply text-white flex gap-3;
+  @apply my-4 text-sky-100 flex justify-center gap-3;
 
-  svg {
-    @apply border border-white p-3;
+  a {
+    @apply border border-sky-100 py-0.5 px-3.5 rounded-full;
   }
 }
 

@@ -8,5 +8,5 @@
 }
 
 .mini-carousel-slide {
-  @apply w-full min-w-96 bg-neutral-100;
+  @apply w-full min-w-96 bg-neutral-200;
 }
