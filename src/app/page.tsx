@@ -1,5 +1,7 @@
 import { Container } from "@/components/layout/container/container";
 import { Hero } from "@/components/layout/hero/hero";
+import { CarouselItemProps } from "@/components/ui/carousel/carousel.types";
+import { MiniCarousel } from "@/components/ui/carousel/mini-carousel/mini-carousel";
 
 import { LANDING_PAGE_MOCK } from "@/constants/mocks/landing.mock";
 import {
@@ -19,6 +21,63 @@ import Link from "next/link";
 
 export default function Home() {
   const { hero } = LANDING_PAGE_MOCK;
+
+  const carouselItems = [
+    {
+      title: "Item 1",
+      image: {
+        src: "/images/works-bp1.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+    {
+      title: "Item 2",
+      image: {
+        src: "/images/works-bp2.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+    {
+      title: "Item 3",
+      image: {
+        src: "/images/works-bp3.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+    {
+      title: "Item 4",
+      image: {
+        src: "/images/works-rm1.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+    {
+      title: "Item 5",
+      image: {
+        src: "/images/works-rm2.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+    {
+      title: "Item 5",
+      image: {
+        src: "/images/works-rm3.png",
+        alt: "Works Bible Project 1",
+        width: "450",
+        height: "250",
+      },
+    },
+  ];
 
   return (
     <>
@@ -147,14 +206,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="carousel">
-            <div className="carousel-track">
-              <div className="carousel-slide bg-pink-300">Text</div>
-              <div className="carousel-slide bg-amber-300">Text</div>
-              <div className="carousel-slide bg-teal-300">Text</div>
-              <div className="carousel-slide bg-lime-300">Text</div>
-            </div>
-          </div>
+          <MiniCarousel items={carouselItems as CarouselItemProps[]} />
         </Container>
       </section>
 

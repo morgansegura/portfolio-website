@@ -1,0 +1,12 @@
+@reference "tailwindcss";
+
+.mini-carousel {
+  @apply w-full overflow-y-hidden overflow-x-auto;
+}
+.mini-carousel-track {
+  @apply grid auto-cols-min grid-flow-col gap-4;
+}
+
+.mini-carousel-slide {
+  @apply w-full min-w-96 bg-neutral-100;
+}
