@@ -1,3 +1,5 @@
+import { ButtonProps } from "@/components/ui/button/button";
+
 const workImage = {
   width: 750,
   height: 900,
@@ -17,7 +19,7 @@ export const WORK_SECTION_MOCK = {
         children: "Bible Project",
         target: "_blank",
         invert: false,
-        variant: "primary",
+        variant: "primary" as ButtonProps["variant"],
       },
       works: [
         {

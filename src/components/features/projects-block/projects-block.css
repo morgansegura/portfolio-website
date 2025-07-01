@@ -13,11 +13,19 @@
     @apply absolute top-2 right-2 bg-white text-xs px-1.5 py-0.5 rounded-full font-medium text-neutral-500;
   }
 
+  .project-card-grid {
+    @apply grid lg:grid-cols-2 gap-x-24;
+  }
+
   .project-card {
     @apply relative bg-(--section-border-color) rounded-lg overflow-hidden;
 
     .heading-sm {
       @apply text-lg font-semibold;
+    }
+
+    &:nth-child(3) {
+      @apply lg:-translate-y-1/3;
     }
   }
 }

@@ -1,15 +1,10 @@
-import Link from "next/link";
-
-import { BoxIcon, MonitorSmartphoneIcon, PenToolIcon } from "lucide-react";
-
 import { Heading } from "@/components/ui/heading/heading";
+import { Button } from "@/components/ui/button/button";
+import { When } from "@/components/helpers/when/when";
 
 import "./info-block.css";
 
-import type { LandingPageProps } from "@/constants/mocks/landing.mock";
 import { INFO_BLOCK_MOCK } from "@/constants/mocks/info-block.mock";
-import { Button } from "@/components/ui/button/button";
-import { When } from "@/components/helpers/when/when";
 
 export function InfoBlock() {
   const { intro, quote, cards } = INFO_BLOCK_MOCK;
@@ -42,7 +37,7 @@ export function InfoBlock() {
       <When condition={!!cards}>
         <div className="skill-block">
           {cards.map((card) => (
-            <div className="card">
+            <div key={card.__id} className="card">
               <div className="card-body" key={card.__id}>
                 <p>{card.description}</p>
                 <br />

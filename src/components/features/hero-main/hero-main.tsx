@@ -2,7 +2,6 @@ import { Hero } from "@/components/layout/hero/hero";
 
 import "./hero-main.css";
 
-import type { LandingPageProps } from "@/constants/mocks/landing.mock";
 import { When } from "@/components/helpers/when/when";
 import { Fragment } from "react";
 import { Heading } from "@/components/ui/heading/heading";

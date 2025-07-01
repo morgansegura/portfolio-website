@@ -33,12 +33,14 @@ export const PROJECTS_BLOCK_MOCK = {
         "Pro bono web reconstruction. New S.E.O and marketing campaign, website refresh and architecture overhaul. This is currently a Wordpress website, however I am nearly finished creating a custom CMS built with Nest.js and Next.js to replace it.",
       tag: "Coming Soon",
       image: {
-        src: "/images/projects-alj.jpg",
+        src: "/images/projects-cvfc.jpg",
         alt: "Chula Vist FC",
         width: imageSizes.width,
         height: imageSizes.height,
       },
       link: {
+        variant: "primary",
+        invert: false,
         href: "https://www.chulavistafc.com",
         children: "Old Website",
         target: "_blank",

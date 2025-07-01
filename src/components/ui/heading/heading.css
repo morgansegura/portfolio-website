@@ -1,0 +1,23 @@
+@reference "tailwindcss";
+
+.heading {
+  &.heading-1 {
+    @apply text-5xl;
+  }
+
+  &.heading-2 {
+    @apply text-4xl font-semibold;
+  }
+
+  &.heading-3 {
+    @apply text-3xl font-semibold tracking-tight leading-none mt-1;
+  }
+
+  &.kicker {
+    @apply font-medium leading-none;
+  }
+
+  .heading-sm {
+    @apply text-lg;
+  }
+}

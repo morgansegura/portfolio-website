@@ -19,27 +19,3 @@
     @apply z-10 opacity-100 pointer-events-auto ease-in;
   }
 }
-
-/* Typography */
-
-br {
-  @apply h-3;
-}
-
-.heading-1 {
-  @apply text-5xl;
-}
-
-.heading-2 {
-  @apply text-4xl font-semibold;
-}
-
-.heading-3 {
-  @apply text-3xl font-semibold tracking-tight leading-none mt-1;
-}
-
-.kicker {
-  @apply font-medium leading-none;
-}
-
-/* Works Grid */
