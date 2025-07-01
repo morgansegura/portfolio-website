@@ -32,13 +32,13 @@ export default function Home() {
                 <HeroMain />
               </When>
               <When condition={content.__sectionId === "works"}>
-                <WorksSection item="0" />
+                <WorksSection item={0} />
               </When>
               <When condition={content.__sectionId === "contact"}>
                 <InfoBlock />
               </When>
               <When condition={content.__sectionId === "works"}>
-                <WorksSection item="1" />
+                <WorksSection item={1} />
               </When>
               <When condition={content.__sectionId === "projects"}>
                 <ProjectsBlock />

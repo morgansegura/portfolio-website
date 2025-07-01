@@ -5,6 +5,7 @@ import { When } from "@/components/helpers/when/when";
 import "./info-block.css";
 
 import { INFO_BLOCK_MOCK } from "@/constants/mocks/info-block.mock";
+import { Typography } from "@/components/ui/typography/typography";
 
 export function InfoBlock() {
   const { intro, quote, cards } = INFO_BLOCK_MOCK;
@@ -13,24 +14,30 @@ export function InfoBlock() {
     <>
       <div className="info-discussion-block">
         <div className="info-email-block">
-          <Heading as="h2" className="heading-2">
+          <Heading as="h2" variant="2">
             {intro?.heading}
           </Heading>
-          <p className="mt-3 text-lg">{intro?.description}</p>
+          <Typography variant="description">
+            <Typography as="p">{intro?.description}</Typography>
+          </Typography>
           <div>
-            <Button href={intro?.button?.href ?? ""}>
+            <Button className="info-button" href={intro?.button?.href ?? ""}>
               {intro?.button?.children}
             </Button>
           </div>
         </div>
 
         <When condition={!!quote}>
-          <div className="flex flex-col max-w-2xl">
-            <h2 className="heading-3 relative">
+          <div className="info-quote">
+            <Heading as="h4" variant="3">
               {quote.heading}
               <span className="info-quote-author">{quote.author}</span>
-            </h2>
-            <p className="info-quote-description">{quote.description}</p>
+            </Heading>
+            <Typography as="div" variant="description">
+              <Typography className="info-quote-description">
+                {quote.description}
+              </Typography>
+            </Typography>
           </div>
         </When>
       </div>
@@ -39,12 +46,13 @@ export function InfoBlock() {
           {cards.map((card) => (
             <div key={card.__id} className="card">
               <div className="card-body" key={card.__id}>
-                <p>{card.description}</p>
-                <br />
+                <Typography as="p">{card.description}</Typography>
               </div>
               <div className="card-title">
                 {card.icon}
-                <p>{card.heading}</p>
+                <Typography as="p" variant="xl">
+                  {card.heading}
+                </Typography>
               </div>
             </div>
           ))}

@@ -8,6 +8,7 @@ const workImage = {
 export const WORK_SECTION_MOCK = {
   workSection: [
     {
+      __id: "0",
       kicker: "Bible Project",
       heading: "Frontend Software Engineer",
       description: [
@@ -63,6 +64,7 @@ export const WORK_SECTION_MOCK = {
       ],
     },
     {
+      __id: "1",
       kicker: "RipeMetrics",
       heading: "Senior Frontend & UI/UX Developer",
       buffer: { top: true, bottom: true },

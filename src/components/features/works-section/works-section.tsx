@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button/button";
 import { Typography } from "@/components/ui/typography/typography";
 
 type WorksSectionProps = {
-  item: `${number}`;
+  item: number;
 };
 
 export function WorksSection({ item }: WorksSectionProps) {
