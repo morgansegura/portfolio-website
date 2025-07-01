@@ -1,0 +1,27 @@
+@reference "tailwindcss";
+
+.tyopgraphy {
+  &[data-typography-variant="xs"] {
+    @apply text-xs;
+  }
+
+  &[data-typography-variant="sm"] {
+    @apply text-sm;
+  }
+
+  &[data-typography-variant="base"] {
+    @apply text-base;
+  }
+
+  &[data-typography-variant="lg"] {
+    @apply text-lg;
+  }
+
+  &[data-typography-variant="xl"] {
+    @apply text-xl;
+  }
+
+  &[data-typography-variant="kicker"] {
+    @apply font-medium leading-none;
+  }
+}
