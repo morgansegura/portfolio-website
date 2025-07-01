@@ -4,7 +4,7 @@
   @apply leading-none font-semibold;
 
   &[data-heading-variant="1"] {
-    @apply text-5xl;
+    @apply text-4xl md:text-5xl xl:text-6xl;
   }
 
   &[data-heading-variant="2"] {

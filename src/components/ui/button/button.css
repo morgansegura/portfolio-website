@@ -5,11 +5,11 @@
 
   &[data-button-invert="false"] {
     &[data-button-variant="primary"] {
-      @apply bg-black border-black text-white hover:bg-neutral-700 hover:border-neutral-700;
+      @apply bg-black border-black text-white hover:bg-neutral-600 hover:border-neutral-600;
     }
 
     &[data-button-variant="secondary"] {
-      @apply bg-white border-white text-black hover:bg-neutral-100 hover:border-neutral-100;
+      @apply bg-white border-white text-black hover:bg-neutral-200 hover:border-neutral-200;
     }
   }
 
@@ -19,7 +19,7 @@
     }
 
     &[data-button-variant="secondary"] {
-      @apply border-white text-white hover:border-neutral-100 hover:text-neutral-100;
+      @apply border-white text-white hover:border-neutral-200 hover:text-neutral-200;
     }
   }
 }

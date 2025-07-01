@@ -8,15 +8,16 @@ import { Heading } from "@/components/ui/heading/heading";
 import { Button } from "@/components/ui/button/button";
 
 import { HERO_BLOCK_MOCK } from "@/constants/mocks/hero-block.mock";
+import { Typography } from "@/components/ui/typography/typography";
 
 export function HeroMain() {
   const data = HERO_BLOCK_MOCK;
 
   return (
-    <Hero>
+    <Hero className="hero-main">
       <Hero.Column>
         <When condition={!!data?.heading}>
-          <Heading as="h1">
+          <Heading as="h1" variant="1">
             {Array.isArray(data.heading)
               ? data.heading?.map((text, index: number) => (
                   <span key={index}>{text}</span>
@@ -56,15 +57,15 @@ export function HeroMain() {
           </Heading>
         </When>
         <When condition={!!data.description}>
-          <div className="description">
+          <Typography as="div" variant="description">
             {Array.isArray(data.description)
               ? data.description?.map((text, index: number) => (
                   <Fragment key={index}>
-                    <p>{text}</p>
+                    <Typography as="p">{text}</Typography>
                   </Fragment>
                 ))
               : data.description}
-          </div>
+          </Typography>
         </When>
       </Hero.Column>
     </Hero>

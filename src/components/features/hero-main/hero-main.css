@@ -2,10 +2,14 @@
 
 .hero-section {
   @apply relative bg-linear-to-br from-emerald-600 via-blue-900 to-blue-600;
+
+  .container {
+    @apply px-0 md:px-4 lg:px-6;
+  }
 }
 
-.hero {
-  @apply relative grid flex-1 items-center py-6 md:py-12 px-2 sm:px-4 md:my-4 bg-slate-950/25 gap-1 
+.hero-main {
+  @apply relative grid flex-1 items-center py-6 px-4 md:my-4 md:py-12  bg-slate-950/25 gap-1 
   border 
   md:rounded-xl 
   mx-auto
@@ -18,67 +22,63 @@
   lg:py-40 
   lg:px-8 
   lg:my-12;
-}
 
-.hero .column {
-  @apply px-2;
-}
+  h1.heading {
+    @apply uppercase text-center;
 
-.hero h1.heading {
-  @apply relative text-center drop-shadow-xl tracking-tight text-3xl md:text-5xl xl:text-6xl uppercase;
+    span:first-child {
+      @apply text-emerald-100 font-thin;
+    }
 
-  span:first-child {
-    @apply text-emerald-100 font-thin uppercase;
+    span:last-child {
+      @apply text-white font-bold;
+    }
   }
 
-  span:last-child {
-    @apply relative text-white font-bold;
+  .hero-column {
+    @apply mx-4;
+  }
+
+  .introduction {
+    @apply grid my-2 md:mt-4 lg:mt-0;
+  }
+
+  .introduction-title {
+    @apply relative inline-flex z-10 text-white text-shadow-2xs shadow tracking-wide text-xl px-2 italic 
+    
+    before:content-[''] 
+    before:-z-10 
+    before:absolute 
+    before:-inset-0.5 
+    before:bg-blue-500 
+    before:-skew-x-12
+    after:content-[''] 
+    after:-z-20 
+    after:absolute 
+    after:inset-y-0 
+    after:-right-1 
+    after:w-10 
+    after:translate-y-1.5 
+    after:translate-x-10 
+    after:bg-blue-600 
+    after:-skew-x-12;
+  }
+
+  [data-heading-variant="2"] {
+    @apply mt-4 max-w-xl text-3xl md:text-4xl text-white;
+
+    span:nth-child(1),
+    span:nth-child(2) {
+      @apply text-emerald-300;
+    }
+  }
+
+  [data-typography-variant="description"] {
+    @apply text-white max-w-[460px];
   }
 }
 
-.hero-section .container {
-  @apply p-0 md:px-4 lg:px-6;
-}
-
-.hero .introduction {
-  @apply grid gap-y-4 my-2 md:mt-4 lg:mt-0;
-}
-
-.hero .introduction-title {
-  @apply relative inline-flex z-10 text-white text-shadow-2xs shadow tracking-wide text-xl px-2 italic 
-  
-  before:content-[''] 
-  before:-z-10 
-  before:absolute 
-  before:-inset-0.5 
-  before:bg-blue-500 
-  before:-skew-x-12
-  after:content-[''] 
-  after:-z-20 
-  after:absolute 
-  after:inset-y-0 
-  after:-right-1 
-  after:w-10 
-  after:translate-y-1.5 
-  after:translate-x-10 
-  after:bg-blue-600 
-  after:-skew-x-12;
-}
-
-.hero .subheading {
-  @apply max-w-xl text-2xl md:text-4xl font-semibold text-white;
-
-  span:nth-child(1),
-  span:nth-child(2) {
-    @apply text-emerald-300;
-  }
-}
-
-.hero .description {
-  @apply grid gap-y-2 md:text-lg text-white;
-}
-
-.hero .social-media {
+.hero-main .social-media {
   @apply my-4 text-sky-100 flex justify-center gap-x-3 border-b border-white/25 pb-6 md:pb-10;
 
   a {
