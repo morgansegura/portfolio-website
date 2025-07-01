@@ -1,61 +1,62 @@
+import Link from "next/link";
 import Image from "next/image";
+
+import { cn } from "@/lib/utils/cn";
 
 import { Heading } from "@/components/ui/heading/heading";
 import { When } from "@/components/helpers/when/when";
 
+import { WORK_SECTION_MOCK } from "@/constants/mocks/work-section.mock";
+
 import "./works-section.css";
 
-import type { LandingPageProps } from "@/constants/mocks/landing.mock";
-import { cn } from "@/lib/utils/cn";
-import Link from "next/link";
+type WorksSectionProps = {
+  item: `${number}`;
+};
 
-export function WorksSection({
-  kicker,
-  heading,
-  description,
-  works,
-  link,
-}: LandingPageProps) {
+export function WorksSection({ item }: WorksSectionProps) {
+  const { workSection } = WORK_SECTION_MOCK;
+
   return (
     <>
       <div className="works-grid">
         <div className="works-intro">
-          <When condition={!!kicker}>
-            <div className="kicker">{kicker}</div>
+          <When condition={!!workSection[item]?.kicker}>
+            <div className="kicker">{workSection[item].kicker}</div>
           </When>
-          <When condition={!!heading}>
+          <When condition={!!workSection[item].heading}>
             <Heading as="h3" className="heading-2">
-              {Array.isArray(heading)
-                ? heading?.map((text, index: number) => (
+              {Array.isArray(workSection[item].heading)
+                ? workSection[item].heading?.map((text, index: number) => (
                     <span key={index}>{text}</span>
                   ))
-                : heading}
+                : workSection[item].heading}
             </Heading>
           </When>
-          <When condition={!!description}>
+          <When condition={!!workSection[item].description}>
             <div className="description">
-              {Array.isArray(description)
-                ? description?.map((text, index: number) => (
+              {Array.isArray(workSection[item].description)
+                ? workSection[item].description?.map((text, index: number) => (
                     <p key={index}>{text}</p>
                   ))
-                : description}
+                : workSection[item].description}
             </div>
           </When>
-          {/* <When condition={!!link}> */}
-          <div className="mt-4">
-            <Link
-              className="button"
-              target={link?.target}
-              href={link?.href ?? ""}
-            >
-              {link?.children}
-            </Link>
-          </div>
-          {/* </When> */}
+          <When condition={!!workSection[item].link}>
+            <div className="mt-4">
+              <Link
+                className="button"
+                target={workSection[item].link?.target}
+                href={workSection[item].link?.href ?? ""}
+              >
+                {workSection[item].link?.children}
+              </Link>
+            </div>
+          </When>
         </div>
 
-        <When condition={!!works}>
-          {works?.map((work, index: number) => (
+        <When condition={!!workSection[item].works}>
+          {workSection[item].works?.map((work, index: number) => (
             <div key={work.__id}>
               <div
                 className={cn(
@@ -87,91 +88,6 @@ export function WorksSection({
           ))}
         </When>
       </div>
-
-      {/* <div className="works-grid">
-        <div className="works-grid-column">
-          <div>
-            <div className="kicker">Bible Project</div>
-            <h3 className="heading-2">Frontend Software Engineer</h3>
-            <div className="description">
-              <p>
-                A nonprofit animation studio that produces beautifully crafted
-                videos, podcasts, and study resources to help people experience
-                the Bible as a unified story that leads to Jesus.
-              </p>
-              <p>
-                Through engaging visuals and deep biblical scholarship, they
-                make complex theological themes accessible to audiences around
-                the world, empowering viewers to explore Scripture with clarity,
-                context, and purpose.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <div className="works-grid-image">
-              <div className="works-grid-heading">
-                <p className="kicker">Bible Project</p>
-                <p className="heading-3">
-                  Landing page and <br /> responsive-first layout
-                </p>
-                <p className="description">
-                  Blessed to work on a team of world class <br /> designers and
-                  animators.
-                </p>
-              </div>
-              <Image
-                src="/images/works-rm1.png"
-                alt=""
-                width="750"
-                height="900"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="works-grid-column">
-          <div className="works-grid-image">
-            <div className="works-grid-heading">
-              <p className="kicker">Classroom</p>
-              <p className="heading-3">
-                Free online course software <br />& content from the library
-              </p>
-              <p className="description">
-                Working at BibleProject I had the opportunity <br /> to work on
-                many amazing projects.
-              </p>
-            </div>
-            <Image
-              src="/images/works-rm2.png"
-              alt=""
-              width="750"
-              height="900"
-            />
-          </div>
-        </div>
-        <div className="works-grid-column">
-          <div className="works-grid-image">
-            <div className="works-grid-heading">
-              <p className="kicker">Video Library</p>
-              <p className="heading-3">
-                Video, Podcasts and throngs <br />
-                of media content.
-              </p>
-              <p className="description">
-                Worked with some of the best <br /> content and media in the
-                world.
-              </p>
-            </div>
-            <Image
-              src="/images/works-rm3.png"
-              alt=""
-              width="750"
-              height="900"
-            />
-          </div>
-        </div>
-      </div> */}
     </>
   );
 }
