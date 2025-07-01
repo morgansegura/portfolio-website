@@ -26,6 +26,7 @@ export default function Home() {
               title={{ as: "h2", children: content.sectionTitle }}
               buffer={content?.buffer}
               spacer={content?.spacer}
+              id={content?.__sectionId}
             >
               <When condition={content.__sectionId === "hero"}>
                 <HeroMain />

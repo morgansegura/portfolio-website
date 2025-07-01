@@ -9,6 +9,7 @@ import { WORK_SECTION_MOCK } from "@/constants/mocks/work-section.mock";
 
 import "./works-section.css";
 import { Button } from "@/components/ui/button/button";
+import { Typography } from "@/components/ui/typography/typography";
 
 type WorksSectionProps = {
   item: `${number}`;
@@ -22,10 +23,12 @@ export function WorksSection({ item }: WorksSectionProps) {
       <div className="works-grid">
         <div className="works-intro">
           <When condition={!!workSection[item]?.kicker}>
-            <div className="kicker">{workSection[item]?.kicker}</div>
+            <Typography as="span" variant="kicker">
+              {workSection[item]?.kicker}
+            </Typography>
           </When>
           <When condition={!!workSection[item]?.heading}>
-            <Heading as="h3" className="heading-2">
+            <Heading as="h2" variant="2">
               {Array.isArray(workSection[item]?.heading)
                 ? workSection[item].heading?.map((text, index: number) => (
                     <span key={index}>{text}</span>
@@ -34,13 +37,15 @@ export function WorksSection({ item }: WorksSectionProps) {
             </Heading>
           </When>
           <When condition={!!workSection[item]?.description}>
-            <div className="description">
+            <Typography as="div" variant="description">
               {Array.isArray(workSection[item]?.description)
                 ? workSection[item]?.description?.map((text, index: number) => (
-                    <p key={index}>{text}</p>
+                    <Typography as="p" key={index}>
+                      {text}
+                    </Typography>
                   ))
                 : workSection[item]?.description}
-            </div>
+            </Typography>
           </When>
           <When condition={!!workSection[item]?.link}>
             <div className="mt-4">
@@ -68,13 +73,19 @@ export function WorksSection({ item }: WorksSectionProps) {
               >
                 <div className="works-grid-heading">
                   <When condition={!!work?.kicker}>
-                    <p className="kicker">{work?.kicker}</p>
+                    <Typography as="span" variant="kicker">
+                      {work?.kicker}
+                    </Typography>
                   </When>
                   <When condition={!!work?.heading}>
-                    <p className="heading-3">{work?.heading}</p>
+                    <Heading as="h3" variant="5">
+                      {work?.heading}
+                    </Heading>
                   </When>
                   <When condition={!!work.description}>
-                    <p className="description">{work?.description}</p>
+                    <Typography as="p" variant="description">
+                      {work?.description}
+                    </Typography>
                   </When>
                 </div>
                 <When condition={!!work?.image?.src}>

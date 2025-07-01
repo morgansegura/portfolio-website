@@ -11,19 +11,21 @@ import "./section.css";
 import type { HeadingProps } from "@/components/ui/heading/heading";
 
 type SectionProps = {
+  buffer?: { top?: boolean; bottom?: boolean };
   className?: string;
   children: ReactNode;
   container?: boolean;
+  id?: string;
   title?: HeadingProps;
   spacer?: boolean;
-  buffer?: { top?: boolean; bottom?: boolean };
   theme?: "default" | "light" | "dark" | string;
 };
 
 export function Section({
+  buffer = { top: false, bottom: false },
   className,
   children,
-  buffer = { top: false, bottom: false },
+  id,
   title,
   spacer = false,
   theme = "default",
@@ -33,6 +35,7 @@ export function Section({
 
   return (
     <section
+      id={id}
       className={cn("section", bufferTop, bufferBottom, className)}
       data-section-theme={theme}
     >

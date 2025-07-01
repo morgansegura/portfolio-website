@@ -1,6 +1,6 @@
 @reference "tailwindcss";
 
-.tyopgraphy {
+.typography {
   &[data-typography-variant="xs"] {
     @apply text-xs;
   }
@@ -22,6 +22,10 @@
   }
 
   &[data-typography-variant="kicker"] {
-    @apply font-medium leading-none;
+    @apply font-medium leading-none mb-1;
+  }
+
+  &[data-typography-variant="description"] {
+    @apply grid gap-y-2 mt-3;
   }
 }

@@ -1,27 +1,29 @@
 @reference "tailwindcss";
 
 .heading {
+  @apply leading-none font-semibold;
+
   &[data-heading-variant="1"] {
     @apply text-5xl;
   }
 
   &[data-heading-variant="2"] {
-    @apply text-4xl font-semibold;
+    @apply text-4xl;
   }
 
   &[data-heading-variant="3"] {
-    @apply text-3xl font-semibold tracking-tight leading-none mt-1;
+    @apply text-3xl tracking-tight;
   }
 
   &[data-heading-variant="4"] {
-    @apply text-2xl font-semibold;
+    @apply text-2xl;
   }
 
   &[data-heading-variant="5"] {
-    @apply text-xl font-semibold;
+    @apply text-xl;
   }
 
   &[data-heading-variant="6"] {
-    @apply text-lg font-medium;
+    @apply text-lg;
   }
 }

@@ -1,11 +1,13 @@
 import { cn } from "@/lib/utils/cn";
 import { ReactNode } from "react";
 
+import "./typography.css";
+
 export type TypographyProps = {
-  as: "p" | "strong" | "div" | "blockquote";
+  as?: "p" | "strong" | "div" | "blockquote" | "span";
   children?: ReactNode;
   className?: string;
-  variant?: "xs" | "sm" | "base" | "lg" | "xl" | "kicker";
+  variant?: "xs" | "sm" | "base" | "lg" | "xl" | "kicker" | "description";
 };
 
 export function Typography({
@@ -15,9 +17,10 @@ export function Typography({
   className,
 }: TypographyProps) {
   const Component = as;
+
   return (
     <Component
-      data-heading-variant={variant}
+      data-typography-variant={variant}
       className={cn("typography", className)}
     >
       {children}
