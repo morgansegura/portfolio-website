@@ -27,7 +27,12 @@ export function HeroMain() {
         <When condition={!!data.mediaLinks}>
           <div className="social-media">
             {data.mediaLinks?.map((link, index: number) => (
-              <Button key={index} href={link.href ?? ""} target={link.target}>
+              <Button
+                key={index}
+                href={link.href ?? ""}
+                target={link.target}
+                variant={link.variant}
+              >
                 {link.children}
               </Button>
             ))}

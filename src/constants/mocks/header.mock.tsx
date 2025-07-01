@@ -1,36 +1,30 @@
-export const HEADER_MOCK = {
-  navigationMain: [
+import { ButtonProps } from "@/components/ui/button/button";
+
+type HeaderBlockMockProps = {
+  navigation: ButtonProps[];
+};
+
+export const HEADER_MOCK: HeaderBlockMockProps = {
+  navigation: [
     {
       href: "#works",
-      icon: "",
-      label: "Work",
+      children: "Work",
       title: "Work",
     },
     {
       href: "#projects",
-      icon: "",
-      label: "Projects",
+      children: "Projects",
       title: "Projects",
     },
     {
       href: "#contact",
-      icon: "",
-      label: "Contact",
+      children: "Contact",
       title: "Contact",
     },
     {
       href: "#blog",
-      icon: "",
-      label: "Blog",
+      children: "Blog",
       title: "Blog",
-    },
-  ],
-  navigationAdmin: [
-    {
-      href: "/",
-      icon: "",
-      label: "Contact",
-      title: "Contact",
     },
   ],
 };

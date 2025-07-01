@@ -23,3 +23,7 @@
     }
   }
 }
+
+.button-label {
+  @apply inline-flex items-center gap-x-2;
+}

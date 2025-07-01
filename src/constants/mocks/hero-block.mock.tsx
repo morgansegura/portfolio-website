@@ -1,4 +1,14 @@
-export const HERO_BLOCK_MOCK = {
+import { ButtonProps } from "@/components/ui/button/button";
+
+type HeroBlockMockProps = {
+  heading?: string[];
+  subheading?: string[];
+  intro?: string;
+  description?: string[];
+  mediaLinks: ButtonProps[];
+};
+
+export const HERO_BLOCK_MOCK: HeroBlockMockProps = {
   heading: ["Morgan", "Segura"],
   subheading: ["UI/UX Developer", "Software Engineer", "based in California"],
   intro: "Introduction",
@@ -8,11 +18,13 @@ export const HERO_BLOCK_MOCK = {
   ],
   mediaLinks: [
     {
+      variant: "secondary",
       target: "_blank",
       href: "https://www.linkedin.com/in/morgan-segura-4b08429/",
       children: "Linked In",
     },
     {
+      variant: "secondary",
       target: "_blank",
       href: "https://github.com/morgansegura",
       children: "Github",

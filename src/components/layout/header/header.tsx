@@ -1,25 +1,23 @@
 import { ReactNode } from "react";
-import Link from "next/link";
 
 import { Container } from "@/components/layout/container/container";
 import { Logo } from "@/components/layout/logo/logo";
+import { When } from "@/components/helpers/when/when";
+import { Button } from "@/components/ui/button/button";
 
+import { useDeviceType } from "@/hooks/use-device-type";
 import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 
 import { HEADER_MOCK } from "@/constants/mocks/header.mock";
 
 import "./header.css";
 
-import type { TNavigationItem } from "@/types/navigation.types";
-import { useDeviceType } from "@/hooks/use-device-type";
-import { When } from "@/components/helpers/when/when";
-
 type HeaderProps = {
   trigger?: ReactNode;
 };
 
 export function Header({ trigger }: HeaderProps) {
-  const { navigationMain: n1 } = HEADER_MOCK;
+  const { navigation } = HEADER_MOCK;
 
   useSmoothScroll(80, true);
   const device = useDeviceType();
@@ -35,18 +33,15 @@ export function Header({ trigger }: HeaderProps) {
 
         <nav className="header-navigation">
           <When condition={laptop}>
-            {n1?.map(
-              ({ href, icon, label }: TNavigationItem, index: number) => (
-                <Link
-                  key={index}
-                  href={href}
-                  className="header-navigation-item"
-                >
-                  {icon}
-                  {label}
-                </Link>
-              ),
-            )}
+            {navigation?.map(({ href, children }, index: number) => (
+              <Button
+                key={index}
+                href={href}
+                className="header-navigation-item"
+              >
+                {children}
+              </Button>
+            ))}
           </When>
           <When condition={mobile}>{trigger}</When>
         </nav>
