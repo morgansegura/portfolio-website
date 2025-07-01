@@ -1,10 +1,12 @@
-import { Link } from "lucide-react";
-
 import { Hero } from "@/components/layout/hero/hero";
 
 import "./hero-main.css";
 
-import type { HeroMainProps } from "@/constants/mocks/landing.mock";
+import type { LandingPageProps } from "@/constants/mocks/landing.mock";
+import { When } from "@/components/helpers/when/when";
+import { Fragment } from "react";
+import { Heading } from "@/components/ui/heading/heading";
+import { Button } from "@/components/ui/button/button";
 
 export function HeroMain({
   description,
@@ -12,29 +14,62 @@ export function HeroMain({
   intro,
   subheading,
   mediaLinks,
-}: HeroMainProps) {
+}: LandingPageProps) {
   return (
     <Hero>
       <Hero.Column>
-        <h1 className="heading">
-          <span className="mo">{heading?.firstName}</span>
-          <span className="segura">{heading?.firstName}</span>
-        </h1>
-        <div className="social-media">
-          {mediaLinks?.map((link) => (
-            <Link href={link.href}>{link.label}</Link>
-          ))}
-        </div>
+        <When condition={!!heading}>
+          <Heading as="h1">
+            {Array.isArray(heading)
+              ? heading?.map((text, index: number) => (
+                  <span key={index}>{text}</span>
+                ))
+              : heading}
+          </Heading>
+        </When>
+        <When condition={!!mediaLinks}>
+          <div className="social-media">
+            {mediaLinks?.map((link, index: number) => (
+              <Button
+                variant={link?.variant}
+                invert={link?.invert}
+                key={index}
+                href={link.href ?? ""}
+                target={link.target}
+              >
+                {link.children}
+              </Button>
+            ))}
+          </div>
+        </When>
       </Hero.Column>
       <Hero.Column className="introduction">
         <div>
           <div className="introduction-title">{intro}</div>
         </div>
-        <h2 className="subheading">
-          <span>{subheading?.jobTitle1}</span> &
-          <span>{subheading?.jobTitle2}</span>, {subheading?.location}
-        </h2>
-        <p className="description">{description}</p>
+        <When condition={!!subheading}>
+          <Heading as="h2" className="subheading">
+            {Array.isArray(subheading)
+              ? subheading?.map((text, index: number) => (
+                  <Fragment key={index}>
+                    <span>{text}</span>
+                    {index === 0 ? " & " : index === 1 ? ", " : ""}
+                  </Fragment>
+                ))
+              : subheading}
+          </Heading>
+        </When>
+        <When condition={!!description}>
+          <div className="description">
+            {Array.isArray(description)
+              ? description?.map((text, index: number) => (
+                  <Fragment key={index}>
+                    <p>{text}</p>
+                  </Fragment>
+                ))
+              : description}
+          </div>
+        </When>
       </Hero.Column>
     </Hero>
   );

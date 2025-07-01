@@ -2,13 +2,13 @@
 
 import { ReactNode, useState } from "react";
 
-import { PanelLeftOpenIcon, PanelRightOpenIcon } from "lucide-react";
+import { SquareArrowRight, SquareMenuIcon } from "lucide-react";
 
 import { Footer } from "@/components/layout/footer/footer";
 import { Header } from "@/components/layout/header/header";
+import { Drawer } from "@/components/layout/drawer/drawer";
 
 import "./page.css";
-import { Drawer } from "../drawer/drawer";
 
 export interface PageLayoutProps {
   children: ReactNode;
@@ -26,7 +26,7 @@ export function PageLayout({ children }: PageLayoutProps) {
       <Header
         trigger={
           <button className="header-trigger" onClick={toggleDrawer}>
-            {!active ? <PanelRightOpenIcon /> : <PanelLeftOpenIcon />}
+            {!active ? <SquareMenuIcon /> : <SquareArrowRight />}
           </button>
         }
       />

@@ -1,0 +1,63 @@
+@reference "tailwindcss";
+
+.section {
+  /* Light, Dark, Neutral */
+
+  @apply relative w-full bg-(--section-bg-color) text-(--section-text-color);
+
+  &[data-section-theme="light"] {
+    --section-bg-color: var(--color-white);
+    --section-text-color: var(--color-neutral-900);
+    --section-border-color: var(--color-neutral-200);
+    --section-bg-accent: var(--color-neutral-100);
+    --section-bg-buttom: var(--color-black);
+    --section-text-buttom: var(--color-neutral-50);
+  }
+
+  &[data-section-theme="neutral"] {
+    --section-bg-color: var(--color-neutral-200);
+    --section-text-color: var(--color-neutral-900);
+    --section-border-color: var(--color-neutral-300);
+    --section-bg-accent: var(--color-neutral-300);
+    --section-bg-buttom: var(--color-black);
+    --section-text-buttom: var(--color-neutral-50);
+  }
+
+  &[data-section-theme="dark"] {
+    --section-bg-color: var(--color-neutral-700);
+    --section-text-color: var(--color-neutral-50);
+    --section-border-color: var(--color-neutral-900);
+    --section-bg-accent: var(--color-neutral-800);
+    --section-bg-buttom: var(--color-white);
+    --section-text-buttom: var(--color-neutral-900);
+  }
+}
+
+.section-buffer-top {
+  @apply pt-12 lg:pt-24;
+}
+
+.section-buffer-bottom {
+  @apply pb-12 lg:pb-24;
+}
+
+.section-container {
+  @apply flex flex-col gap-14;
+}
+
+.section-title {
+  @apply relative font-medium text-lg tracking-tight uppercase mb-12
+  after:content-[''] after:absolute after:-bottom-px after:h-px after:inset-x-0 after:bg-linear-to-r after:from-emerald-500 after:via-blue-400 after:to-blue-200/25;
+
+  span {
+    @apply py-1 px-2 text-white font-semibold bg-emerald-500 rounded-t-sm;
+  }
+}
+
+.section-transition {
+  @apply before:content-[''] before:absolute before:top-0 before:inset-x-0 before:h-20 before:bg-linear-to-b before:from-white before:border-t before:border-white before:to-neutral-200;
+}
+
+.section-spacer {
+  @apply mt-12 border-(--section-border-color);
+}

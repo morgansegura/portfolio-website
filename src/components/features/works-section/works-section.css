@@ -1,0 +1,46 @@
+@reference "tailwindcss";
+
+.works-grid {
+  @apply w-full grid gap-10 max-w-xl mx-auto lg:max-w-full lg:grid-rows-2 lg:grid-cols-2 lg:gap-20;
+}
+
+.works-intro {
+  .heading-2 {
+    @apply max-w-90;
+  }
+
+  .description {
+    @apply grid gap-2 max-w-md;
+  }
+}
+
+.works-grid-column {
+  @apply relative flex flex-col justify-between gap-4;
+}
+
+.works-grid-first-column {
+  @apply flex flex-col h-full row-span-2 gap-y-6;
+
+  .works-grid-image {
+    @apply justify-self-center;
+  }
+}
+
+.works-grid-heading {
+  @apply absolute p-6 lg:p-8;
+
+  .heading-3 {
+    @apply max-w-84;
+  }
+  .description {
+    @apply max-w-60;
+  }
+}
+
+.works-grid-image {
+  @apply relative rounded-lg overflow-hidden flex flex-col bg-(--section-bg-accent) w-full h-full;
+
+  &.works-image-offset {
+    @apply relative top-0 lg:-translate-y-1/2;
+  }
+}

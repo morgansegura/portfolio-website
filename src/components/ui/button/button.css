@@ -1,0 +1,25 @@
+@reference "tailwindcss";
+
+.button {
+  @apply transition-colors border-2 inline-flex px-2 py-1 rounded-md text-base duration-300 ease-out;
+
+  &[data-button-invert="false"] {
+    &[data-button-variant="primary"] {
+      @apply bg-black text-white hover:bg-neutral-700;
+    }
+
+    &[data-button-variant="secondary"] {
+      @apply bg-white text-black hover:bg-neutral-100;
+    }
+  }
+
+  &[data-button-invert="true"] {
+    &[data-button-variant="primary"] {
+      @apply border-black text-black hover:bg-neutral-700 hover:text-neutral-700;
+    }
+
+    &[data-button-variant="secondary"] {
+      @apply border-white text-white hover:border-neutral-100 hover:text-neutral-100;
+    }
+  }
+}

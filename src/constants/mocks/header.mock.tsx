@@ -1,34 +1,28 @@
 export const HEADER_MOCK = {
   navigationMain: [
     {
-      href: "/",
+      href: "#works",
       icon: "",
-      label: "Work Projects",
-      title: "Work Projects",
+      label: "Work",
+      title: "Work",
     },
     {
-      href: "/",
+      href: "#projects",
       icon: "",
-      label: "Pro Bono",
-      title: "Pro Bono",
+      label: "Projects",
+      title: "Projects",
     },
     {
-      href: "/",
+      href: "#contact",
       icon: "",
-      label: "Design Work",
-      title: "Design Work",
+      label: "Contact",
+      title: "Contact",
     },
     {
-      href: "/",
+      href: "#blog",
       icon: "",
-      label: "Design Work",
-      title: "Design Work",
-    },
-    {
-      href: "/",
-      icon: "",
-      label: "About Me",
-      title: "About Me",
+      label: "Blog",
+      title: "Blog",
     },
   ],
   navigationAdmin: [

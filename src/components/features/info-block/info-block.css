@@ -1,0 +1,37 @@
+@reference "tailwindcss";
+
+.info-discussion-block {
+  @apply grid gap-20 max-w-xl mx-auto lg:max-w-full lg:grid-cols-2 mb-12;
+}
+
+.info-email-block {
+  @apply flex flex-col max-w-md;
+}
+
+.info-button {
+  @apply inline-flex mt-4 items-center gap-1 text-xl font-semibold text-white bg-black rounded-md px-3 py-1.5 hover:bg-neutral-800 transition-colors duration-300 ease-out;
+}
+
+.info-quote-author {
+  @apply absolute bg-(--section-bg-accent) right-12 rounded-md px-1.5 -top-7 inline text-base;
+}
+
+.info-quote-description {
+  @apply mt-4 text-lg;
+}
+
+.skill-block {
+  @apply grid lg:grid-cols-3 gap-8;
+}
+
+.skill-block .card {
+  @apply relative mx-auto w-full max-w-xl px-4 pt-10 flex flex-col gap-y-2 pb-7 border border-(--section-border-color) bg-neutral-100 after:content-[''] after:absolute after:h-1.5 after:bg-neutral-300 after:-bottom-2 after:inset-x-1;
+}
+
+.card-title {
+  @apply flex items-center text-2xl font-semibold leading-none gap-x-3;
+}
+
+.card-body {
+  @apply flex flex-col flex-1 gap-y-2;
+}

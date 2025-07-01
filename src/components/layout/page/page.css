@@ -20,70 +20,6 @@
   }
 }
 
-.section {
-  /* Light, Dark, Neutral */
-
-  @apply relative block py-24 w-full bg-(--section-bg-color) text-(--section-text-color);
-
-  &[data-section-theme="light"] {
-    --section-bg-color: var(--color-white);
-    --section-text-color: var(--color-neutral-900);
-    --section-border-color: var(--color-neutral-200);
-  }
-
-  &[data-section-theme="neutral"] {
-    --section-bg-color: var(--color-neutral-200);
-    --section-text-color: var(--color-neutral-900);
-    --section-border-color: var(--color-neutral-300);
-  }
-
-  &[data-section-theme="dark"] {
-    --section-bg-color: var(--color-neutral-700);
-    --section-text-color: var(--color-neutral-50);
-    --section-border-color: var(--color-neutral-900);
-  }
-}
-
-.section-container {
-  @apply flex flex-col gap-14;
-}
-
-.section-title {
-  @apply font-medium text-lg tracking-tight uppercase border-b border-(--section-border-color);
-
-  span {
-    @apply py-1 px-2 bg-(--section-border-color);
-  }
-}
-
-.section-transition {
-  @apply before:content-[''] before:absolute before:top-0 before:inset-x-0 before:h-20 before:bg-linear-to-b before:from-white before:border-t before:border-white before:to-neutral-200;
-}
-
-.header-trigger {
-  @apply relative z-30 cursor-pointer hover:text-neutral-500 transition-colors duration-250 ease-out;
-
-  svg {
-    @apply h-5;
-  }
-}
-
-.skill-block {
-  @apply grid lg:grid-cols-3 gap-8;
-}
-
-.skill-block .card {
-  @apply relative mx-auto w-full max-w-md px-4 pt-10 flex flex-col gap-y-2 pb-7 border bg-neutral-100 after:content-[''] after:absolute after:h-1.5 after:bg-neutral-300 after:-bottom-2.5 after:inset-x-1;
-}
-
-.card-title {
-  @apply flex items-center text-2xl font-semibold leading-none gap-x-3;
-}
-
-.card-body {
-  @apply flex flex-col flex-1 gap-y-2;
-}
-
 /* Typography */
 
 br {
@@ -106,40 +42,4 @@ br {
   @apply font-medium leading-none;
 }
 
-.description {
-  @apply mt-4;
-}
-
 /* Works Grid */
-
-.works-grid {
-  @apply w-full grid gap-10 max-w-xl mx-auto lg:max-w-full lg:grid-rows-2 lg:grid-cols-2 lg:gap-20;
-}
-
-.works-grid-column {
-  @apply relative flex flex-col justify-between gap-4;
-
-  &:first-of-type {
-    @apply lg:row-span-2;
-  }
-
-  &:first-of-type .works-grid-image {
-    @apply relative top-0 lg:-translate-y-1/2;
-  }
-}
-
-.works-grid-first-column {
-  @apply flex flex-col h-full row-span-2 gap-y-6;
-
-  .works-grid-image {
-    @apply justify-self-center;
-  }
-}
-
-.works-grid-heading {
-  @apply absolute p-8;
-}
-
-.works-grid-image {
-  @apply relative rounded-lg overflow-hidden flex flex-col bg-(--section-border-color) w-full h-full;
-}

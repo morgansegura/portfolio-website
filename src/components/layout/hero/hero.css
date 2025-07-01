@@ -1,54 +1,5 @@
 @reference "tailwindcss";
 
-.hero-section {
-  @apply relative bg-linear-to-br from-emerald-600 via-blue-900 to-blue-600;
-}
-
 .hero {
-  @apply relative grid flex-1 items-center border rounded-xl border-white/15 bg-slate-950/25 shadow-xl gap-1 py-20 px-4 my-10 lg:grid-cols-2 lg:gap-24 lg:py-40 lg:px-8 lg:my-24;
-}
-
-.hero .column {
-  @apply px-2;
-}
-
-.hero .heading {
-  @apply relative text-center lg:text-left drop-shadow-xl tracking-tight text-5xl md:text-6xl uppercase;
-
-  span.mo {
-    @apply text-emerald-100 font-thin uppercase;
-  }
-
-  span.segura {
-    @apply relative text-white font-bold;
-  }
-}
-
-.hero .social-media {
-  @apply my-4 text-sky-100 flex justify-center gap-3;
-
-  a {
-    @apply border border-sky-100 py-0.5 px-3.5 rounded-full;
-  }
-}
-
-.hero .introduction {
-  @apply grid gap-y-4 mt-6 lg:mt-0;
-}
-
-.hero .introduction-title {
-  @apply relative inline-flex z-10 text-white text-shadow-2xs shadow tracking-wide text-xl px-2 italic before:content-[''] before:-z-10 before:absolute before:-inset-0.5 before:bg-blue-500 before:-skew-x-12
-  after:content-[''] after:-z-20 after:absolute after:inset-y-0 after:-right-1 after:w-10 after:translate-y-1.5 after:translate-x-10 after:bg-blue-600 after:-skew-x-12;
-}
-
-.hero .subheading {
-  @apply max-w-xl text-4xl font-semibold text-white;
-
-  span {
-    @apply text-emerald-300;
-  }
-}
-
-.hero .description {
-  @apply text-lg text-white;
+  @apply relative;
 }
