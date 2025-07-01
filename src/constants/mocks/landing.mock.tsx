@@ -57,31 +57,6 @@ export const LANDING_PAGE_MOCK: LandingPageProps[] = [
     sectionTheme: "none",
     sectionClassName: "hero-section",
     sectionTitle: "",
-    heading: ["Morgan ", "Segura"],
-    subheading: ["UI/UX Developer", "Software Engineer", "based in California"],
-    intro: "Introduction",
-    description: [
-      "Senior Software Engineer & UI/UX Developer crafting intuitive, reliable digital experiences. I specialize in building scalable front-end and full-stack applications with clean design,thoughtful architecture, and a strong focus on user experience.",
-      "Whether I\'m designing a new interface or optimizing a backend system, I believe great software should be elegant, maintainable, and built with purpose.",
-    ],
-
-    mediaLinks: [
-      {
-        target: "_blank",
-        href: "https://www.linkedin.com/in/morgan-segura-4b08429/",
-        children: "Linked In",
-      },
-      {
-        target: "_blank",
-        href: "https://github.com/morgansegura",
-        children: "Github",
-      },
-      // {
-      //   target: "_blank",
-      //   href: "mailto:hello@morgansegura.com",
-      //   label: "Resume",
-      // },
-    ],
   },
   {
     __id: "works",

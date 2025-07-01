@@ -28,13 +28,13 @@ export default function Home() {
               spacer={content?.spacer}
             >
               <When condition={content.__sectionId === "hero"}>
-                <HeroMain {...content} />
+                <HeroMain />
               </When>
               <When condition={content.__sectionId === "works"}>
                 <WorksSection {...content} />
               </When>
               <When condition={content.__sectionId === "contact"}>
-                <InfoBlock {...content} />
+                <InfoBlock />
               </When>
               <When condition={content.__sectionId === "projects"}>
                 <ProjectsBlock />

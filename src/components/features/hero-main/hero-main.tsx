@@ -8,35 +8,27 @@ import { Fragment } from "react";
 import { Heading } from "@/components/ui/heading/heading";
 import { Button } from "@/components/ui/button/button";
 
-export function HeroMain({
-  description,
-  heading,
-  intro,
-  subheading,
-  mediaLinks,
-}: LandingPageProps) {
+import { HERO_BLOCK_MOCK } from "@/constants/mocks/hero-block.mock";
+
+export function HeroMain() {
+  const data = HERO_BLOCK_MOCK;
+
   return (
     <Hero>
       <Hero.Column>
-        <When condition={!!heading}>
+        <When condition={!!data?.heading}>
           <Heading as="h1">
-            {Array.isArray(heading)
-              ? heading?.map((text, index: number) => (
+            {Array.isArray(data.heading)
+              ? data.heading?.map((text, index: number) => (
                   <span key={index}>{text}</span>
                 ))
-              : heading}
+              : data.heading}
           </Heading>
         </When>
-        <When condition={!!mediaLinks}>
+        <When condition={!!data.mediaLinks}>
           <div className="social-media">
-            {mediaLinks?.map((link, index: number) => (
-              <Button
-                variant={link?.variant}
-                invert={link?.invert}
-                key={index}
-                href={link.href ?? ""}
-                target={link.target}
-              >
+            {data.mediaLinks?.map((link, index: number) => (
+              <Button key={index} href={link.href ?? ""} target={link.target}>
                 {link.children}
               </Button>
             ))}
@@ -45,29 +37,29 @@ export function HeroMain({
       </Hero.Column>
       <Hero.Column className="introduction">
         <div>
-          <div className="introduction-title">{intro}</div>
+          <div className="introduction-title">{data.intro}</div>
         </div>
-        <When condition={!!subheading}>
+        <When condition={!!data.subheading}>
           <Heading as="h2" className="subheading">
-            {Array.isArray(subheading)
-              ? subheading?.map((text, index: number) => (
+            {Array.isArray(data.subheading)
+              ? data.subheading?.map((text, index: number) => (
                   <Fragment key={index}>
                     <span>{text}</span>
                     {index === 0 ? " & " : index === 1 ? ", " : ""}
                   </Fragment>
                 ))
-              : subheading}
+              : data.subheading}
           </Heading>
         </When>
-        <When condition={!!description}>
+        <When condition={!!data.description}>
           <div className="description">
-            {Array.isArray(description)
-              ? description?.map((text, index: number) => (
+            {Array.isArray(data.description)
+              ? data.description?.map((text, index: number) => (
                   <Fragment key={index}>
                     <p>{text}</p>
                   </Fragment>
                 ))
-              : description}
+              : data.description}
           </div>
         </When>
       </Hero.Column>
