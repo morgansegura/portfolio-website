@@ -36,6 +36,7 @@ export const WORK_SECTION_MOCK: WorkSectionProps = {
         "Through engaging visuals and deep biblical scholarship, they make complex theological themes accessible to audiences around context, and purpose.",
       ],
       link: {
+        title: "My most recent work with Bible Project",
         href: "https://bibleproject.com",
         children: "Bible Project",
         target: "_blank",
@@ -93,6 +94,12 @@ export const WORK_SECTION_MOCK: WorkSectionProps = {
         "At RipeMetrics, I led front-end development and user experience design for a business intelligence platform focused on actionable customer insights.",
         "Helped architect and implement responsive, component-based interfaces using Laravel, Vue, TailwindCSS, and modern design systems. Working closely with product and backend teams, I translated complex data into intuitive dashboards and tools that empowered business owners to make confident, data-driven decisions.",
       ],
+      link: {
+        title: "My most recent work with Ripe Metrics",
+        href: "https://ripemetrics.com",
+        children: "Ripe Metrics",
+        target: "_blank",
+      },
       works: [
         {
           __id: "0",

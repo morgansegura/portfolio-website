@@ -45,10 +45,10 @@ export function Button({
   );
   return href ? (
     <Link
-      data-title={title}
       className={cn("button", className)}
       target={target}
       href={href ?? ""}
+      aria-label={title}
       data-button-invert={invert}
       data-button-variant={variant}
     >
@@ -56,8 +56,8 @@ export function Button({
     </Link>
   ) : (
     <button
-      data-title={title}
       onClick={onClick}
+      aria-label={title}
       className={cn("button", className)}
       data-button-invert={invert}
       data-button-variant={variant}

@@ -30,6 +30,7 @@ export const INFO_BLOCK_MOCK: InfoBlockProps = {
     description:
       "I am happy to chat about new opportunities, freelance work, or collaboration.",
     button: {
+      title: "Reach out via email.",
       href: "mailto:hello@morgansegura.com",
       children: "hello@morgansegura.com",
       target: "_blank",

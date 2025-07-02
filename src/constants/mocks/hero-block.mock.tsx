@@ -19,6 +19,7 @@ export const HERO_BLOCK_MOCK: HeroBlockMockProps = {
   mediaLinks: [
     {
       variant: "secondary",
+      title: "Find me on linked in",
       target: "_blank",
       href: "https://www.linkedin.com/in/morgan-segura-4b08429/",
       children: "Linked In",
@@ -26,6 +27,7 @@ export const HERO_BLOCK_MOCK: HeroBlockMockProps = {
     {
       variant: "secondary",
       target: "_blank",
+      title: "Find me on Github",
       href: "https://github.com/morgansegura",
       children: "Github",
     },

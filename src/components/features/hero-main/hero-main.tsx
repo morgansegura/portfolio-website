@@ -30,9 +30,10 @@ export function HeroMain() {
             {data.mediaLinks?.map((link, index: number) => (
               <Button
                 key={index}
-                href={link.href ?? ""}
-                target={link.target}
-                variant={link.variant}
+                title={link?.title}
+                href={link?.href ?? ""}
+                target={link?.target}
+                variant={link?.variant}
               >
                 {link.children}
               </Button>

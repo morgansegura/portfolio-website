@@ -29,7 +29,7 @@ export function InfoBlock() {
 
         <When condition={!!quote}>
           <div className="info-quote">
-            <Heading as="h4" variant="3">
+            <Heading as="h3" variant="3">
               {quote.heading}
               <span className="info-quote-author">{quote.author}</span>
             </Heading>

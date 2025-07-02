@@ -51,6 +51,7 @@ export function WorksSection({ item }: WorksSectionProps) {
             <div className="mt-4">
               <Button
                 className="button"
+                title={workSection[item]?.link?.title}
                 invert={workSection[item]?.link?.invert}
                 variant={workSection[item]?.link?.variant}
                 target={workSection[item]?.link?.target}

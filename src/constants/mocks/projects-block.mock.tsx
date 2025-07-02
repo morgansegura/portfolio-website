@@ -38,6 +38,7 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
         height: imageSizes.height,
       },
       link: {
+        title: "Project: Nations of Stone Trilogy",
         href: "https://www.authorlj.com/",
         children: "Official Website",
         target: "_blank",
@@ -56,6 +57,7 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
         height: imageSizes.height,
       },
       link: {
+        title: "Project: Chula Vista Fúbol Club",
         variant: "primary",
         invert: false,
         href: "https://www.chulavistafc.com",
@@ -76,6 +78,7 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
         height: imageSizes.height,
       },
       link: {
+        title: "Project: Grass Roots Foundation",
         href: "https://www.grassrootsfdn.org",
         children: "Current Landing Page",
         target: "_blank",

@@ -36,10 +36,11 @@ export function Header() {
           </When>
 
           <nav className="header-navigation">
-            {navigation?.map(({ href, children }, index: number) => (
+            {navigation?.map(({ href, children, title }, index: number) => (
               <Button
                 key={index}
                 href={href}
+                title={title}
                 variant="unstyled"
                 className="header-navigation-item"
               >

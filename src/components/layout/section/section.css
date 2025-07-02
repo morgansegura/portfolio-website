@@ -50,7 +50,7 @@
   after:content-[''] after:absolute after:-bottom-px after:h-px after:inset-x-0 after:bg-linear-to-r after:from-neutral-400 after:via-neutral-300 after:to-neutral-200/25;
 
   span {
-    @apply py-1 px-2 text-white font-semibold bg-neutral-400 rounded-t-sm;
+    @apply py-1 px-2 text-white font-semibold bg-(--section-bg-accent) rounded-t-sm;
   }
 }
 
