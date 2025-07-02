@@ -52,10 +52,10 @@ export function Header() {
       <div
         className={cn(
           "fixed bottom-16 right-6 z-30 transition-opacity duration-300",
-          scrolled ? "opacity-100 ease-in" : "opacity-100 ease-out",
+          scrolled ? "opacity-100 ease-in" : "opacity-0 ease-out",
         )}
       >
-        <Button href="/#top">
+        <Button href="#top">
           <ArrowUpIcon className="my-1" />
         </Button>
       </div>

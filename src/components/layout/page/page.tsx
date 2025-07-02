@@ -13,7 +13,7 @@ export interface PageLayoutProps {
 }
 
 export function PageLayout({ children }: PageLayoutProps) {
-  useSmoothScroll(80, true);
+  useSmoothScroll(100, true);
 
   return (
     <div className="page">
