@@ -1,8 +1,25 @@
+import { ButtonProps } from "@/components/ui/button/button";
+import { ImageProps } from "next/image";
+
 const imageSizes = {
   width: 650,
   height: 300,
 };
-export const PROJECTS_BLOCK_MOCK = {
+
+type ProjectBlockMovckProps = {
+  heading?: string;
+  description?: string[];
+  cards: {
+    __id?: string;
+    heading?: string;
+    description?: string;
+    tag?: string;
+    image?: ImageProps;
+    link?: ButtonProps;
+  }[];
+};
+
+export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
   heading: "Project & Pro Bono Work",
   description: [
     "In addition to professional work, I regularly take on pro bono projects to support my community and causes I believe in.",

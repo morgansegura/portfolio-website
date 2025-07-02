@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .heading {
-  @apply leading-none font-semibold;
+  @apply leading-tight font-semibold;
 
   &[data-heading-variant="1"] {
     @apply text-4xl md:text-5xl xl:text-6xl;

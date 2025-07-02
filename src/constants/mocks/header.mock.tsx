@@ -7,24 +7,28 @@ type HeaderBlockMockProps = {
 export const HEADER_MOCK: HeaderBlockMockProps = {
   navigation: [
     {
-      href: "#works",
+      href: "/#works-1",
       children: "Work",
       title: "Work",
+      variant: "unstyled",
     },
     {
-      href: "#projects",
+      href: "/#projects",
       children: "Projects",
       title: "Projects",
+      variant: "unstyled",
     },
     {
-      href: "#contact",
+      href: "/#contact",
       children: "Contact",
       title: "Contact",
+      variant: "unstyled",
     },
-    {
-      href: "#blog",
-      children: "Blog",
-      title: "Blog",
-    },
+    // {
+    //   href: "#blog",
+    //   children: "Blog",
+    //   title: "Blog",
+    //   variant: "unstyled",
+    // },
   ],
 };

@@ -13,7 +13,7 @@
 }
 
 .info-quote-author {
-  @apply absolute bg-(--section-bg-accent) right-0 rounded-md px-1.5 -top-7 inline text-base;
+  @apply absolute bg-(--section-bg-accent) left-0 lg:left-auto lg:right-0 rounded-md px-1.5 -top-7 inline text-base;
 }
 
 .info-quote {

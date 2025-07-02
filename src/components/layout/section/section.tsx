@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils/cn";
 
-import { Heading } from "@/components/ui/heading/heading";
 import { When } from "@/components/helpers/when/when";
 import { Container } from "@/components/layout/container/container";
 
 import "./section.css";
 
 import type { HeadingProps } from "@/components/ui/heading/heading";
+import { Typography } from "@/components/ui/typography/typography";
 
 type SectionProps = {
   buffer?: { top?: boolean; bottom?: boolean };
@@ -41,9 +41,9 @@ export function Section({
     >
       <Container>
         <When condition={!!title?.children}>
-          <Heading as={title?.as || "h2"} className="section-title">
+          <Typography as="span" className="section-title">
             <span>{title?.children}</span>
-          </Heading>
+          </Typography>
         </When>
         {children}
         <When condition={!!spacer}>

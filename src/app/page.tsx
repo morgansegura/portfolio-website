@@ -17,6 +17,7 @@ export default function Home() {
 
   return (
     <>
+      <span id="top" />
       {data.map((content: LandingPageProps, dataIndex: number) => (
         <Fragment key={dataIndex}>
           <>
@@ -37,7 +38,7 @@ export default function Home() {
               <When condition={content.__sectionId === "contact"}>
                 <InfoBlock />
               </When>
-              <When condition={content.__sectionId === "works"}>
+              <When condition={content.__sectionId === "works-1"}>
                 <WorksSection item={1} />
               </When>
               <When condition={content.__sectionId === "projects"}>

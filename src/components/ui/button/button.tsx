@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 
+import { cn } from "@/lib/utils/cn";
 export interface ButtonProps {
   children?: ReactNode;
   className?: string;
@@ -11,11 +12,11 @@ export interface ButtonProps {
   onClick?: () => void;
   title?: string;
   target?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "unstyled";
 }
 
 import "./button.css";
-import { cn } from "@/lib/utils/cn";
+import { When } from "@/components/helpers/when/when";
 
 export function Button({
   href,
@@ -31,9 +32,15 @@ export function Button({
 }: ButtonProps) {
   const innerContent = (
     <div>
-      <span className="button-icon-left">{iconLeft}</span>
-      <span className="button-label">{children}</span>
-      <span className="button-icon-right">{iconRight}</span>
+      <When condition={!!iconLeft}>
+        <span className="button-icon-left">{iconLeft}</span>
+      </When>
+      <When condition={!!children}>
+        <span className="button-label">{children}</span>
+      </When>
+      <When condition={!!iconRight}>
+        <span className="button-icon-right">{iconRight}</span>
+      </When>
     </div>
   );
   return href ? (
@@ -42,6 +49,7 @@ export function Button({
       className={cn("button", className)}
       target={target}
       href={href ?? ""}
+      scroll={false}
       data-button-invert={invert}
       data-button-variant={variant}
     >

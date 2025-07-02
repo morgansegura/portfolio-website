@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .page {
-  @apply relative z-0 h-screen flex flex-col flex-1;
+  @apply relative z-0 h-screen flex flex-col flex-1 overflow-y-scroll;
 }
 
 .page-main {
@@ -9,7 +9,7 @@
 }
 
 .page-backdrop {
-  @apply fixed inset-0 bg-neutral-200 transition-opacity duration-300;
+  @apply fixed border-t inset-0 bg-black/80 transition-opacity duration-300;
 
   &[data-backdrop-active="inactive"] {
     @apply -z-10 opacity-0 pointer-events-none ease-out;

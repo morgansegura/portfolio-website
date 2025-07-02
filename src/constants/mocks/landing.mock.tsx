@@ -36,7 +36,7 @@ export const LANDING_PAGE_MOCK: LandingPageProps[] = [
   },
   {
     __id: "works-1",
-    __sectionId: "works",
+    __sectionId: "works-1",
     sectionTheme: "light",
     sectionClassName: "works-section",
     sectionTitle: "Work",

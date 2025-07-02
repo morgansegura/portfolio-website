@@ -1,6 +1,30 @@
 import { BoxIcon, MonitorSmartphoneIcon, PenToolIcon } from "lucide-react";
 
-export const INFO_BLOCK_MOCK = {
+import type { ButtonProps } from "@/components/ui/button/button";
+import type { ImageProps } from "next/image";
+import type { ReactNode } from "react";
+
+type InfoBlockProps = {
+  intro: {
+    heading?: string;
+    description?: string;
+    button?: ButtonProps;
+  };
+  quote: {
+    heading?: string;
+    author?: string;
+    description?: string;
+  };
+  cards: {
+    __id: string;
+    heading?: string;
+    description?: string;
+    image?: ImageProps;
+    icon?: ReactNode;
+  }[];
+};
+
+export const INFO_BLOCK_MOCK: InfoBlockProps = {
   intro: {
     heading: "Let's start a conversation.",
     description:

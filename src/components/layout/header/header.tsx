@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+"use client";
 
 import { Container } from "@/components/layout/container/container";
 import { Logo } from "@/components/layout/logo/logo";
@@ -6,46 +6,56 @@ import { When } from "@/components/helpers/when/when";
 import { Button } from "@/components/ui/button/button";
 
 import { useDeviceType } from "@/hooks/use-device-type";
-import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
+
+import { ArrowUpIcon } from "lucide-react";
+import { cn } from "@/lib/utils/cn";
 
 import { HEADER_MOCK } from "@/constants/mocks/header.mock";
 
 import "./header.css";
+import { useScroll } from "@/hooks/use-scroll";
 
-type HeaderProps = {
-  trigger?: ReactNode;
-};
-
-export function Header({ trigger }: HeaderProps) {
+export function Header() {
   const { navigation } = HEADER_MOCK;
 
-  useSmoothScroll(80, true);
   const device = useDeviceType();
+  const scrolled = useScroll(100);
 
-  const mobile = device === "mobile";
   const laptop =
     device === "tablet" || device === "laptop" || device === "desktop";
 
   return (
-    <header className="header">
-      <Container className="header-container">
-        <Logo className="header-logo" />
-
-        <nav className="header-navigation">
+    <>
+      <header className="header">
+        <Container className="header-container">
           <When condition={laptop}>
+            <Logo className="header-logo" />
+          </When>
+
+          <nav className="header-navigation">
             {navigation?.map(({ href, children }, index: number) => (
               <Button
                 key={index}
                 href={href}
+                variant="unstyled"
                 className="header-navigation-item"
               >
                 {children}
               </Button>
             ))}
-          </When>
-          <When condition={mobile}>{trigger}</When>
-        </nav>
-      </Container>
-    </header>
+          </nav>
+        </Container>
+      </header>
+      <div
+        className={cn(
+          "fixed bottom-2 right-2 z-30 transition-opacity duration-300",
+          scrolled ? "opacity-100 ease-in" : "opacity-100 ease-out",
+        )}
+      >
+        <Button href="/#top">
+          <ArrowUpIcon className="my-1" />
+        </Button>
+      </div>
+    </>
   );
 }

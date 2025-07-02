@@ -83,13 +83,14 @@ export function WorksSection({ item }: WorksSectionProps) {
                     </Heading>
                   </When>
                   <When condition={!!work.description}>
-                    <Typography as="p" variant="description">
-                      {work?.description}
+                    <Typography as="div" variant="description">
+                      <Typography as="p">{work?.description}</Typography>
                     </Typography>
                   </When>
                 </div>
                 <When condition={!!work?.image?.src}>
                   <Image
+                    priority={work?.image?.priority || false}
                     src={work?.image?.src || ""}
                     alt={work?.image?.alt || ""}
                     width={work?.image?.width}

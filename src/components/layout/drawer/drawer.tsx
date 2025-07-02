@@ -2,19 +2,15 @@ import { ReactNode } from "react";
 
 import { cn } from "@/lib/utils/cn";
 
-import { When } from "@/components/helpers/when/when";
-
 import "./drawer.css";
-
-import type { TNavigationItem } from "@/types/navigation.types";
-import Link from "next/link";
+import { ButtonProps } from "@/components/ui/button/button";
 
 type DrawerProps = {
   className?: string;
   children: ReactNode;
   open: boolean;
   setOpen: () => void;
-  navItems?: TNavigationItem[];
+  navItems?: ButtonProps[];
 };
 
 export function Drawer({ className, children, open }: DrawerProps) {
