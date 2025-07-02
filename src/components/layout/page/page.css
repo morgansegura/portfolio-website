@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .page {
-  @apply relative z-0 h-screen flex flex-col flex-1 overflow-y-scroll;
+  @apply relative z-0 h-screen flex flex-col flex-1;
 }
 
 .page-main {

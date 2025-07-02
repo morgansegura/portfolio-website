@@ -1,7 +1,7 @@
 import type { SpacingType } from "@/types/content.types";
 
 export interface LandingPageProps {
-  __id: string;
+  __id?: string;
   __sectionId: string;
   sectionClassName?: string;
   sectionTitle?: string;
@@ -19,7 +19,6 @@ export const LANDING_PAGE_MOCK: LandingPageProps[] = [
     sectionTitle: "",
   },
   {
-    __id: "works",
     __sectionId: "works",
     sectionTheme: "dark",
     sectionClassName: "works-section",

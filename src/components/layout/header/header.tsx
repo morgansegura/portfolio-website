@@ -29,7 +29,10 @@ export function Header() {
       <header className="header">
         <Container className="header-container">
           <When condition={laptop}>
-            <Logo className="header-logo" />
+            <Logo className="header-logo" />{" "}
+            <span className="text-base font-bold uppercase ml-2 text-neutral-600">
+              Morgan Segura
+            </span>
           </When>
 
           <nav className="header-navigation">
@@ -48,7 +51,7 @@ export function Header() {
       </header>
       <div
         className={cn(
-          "fixed bottom-2 right-2 z-30 transition-opacity duration-300",
+          "fixed bottom-16 right-6 z-30 transition-opacity duration-300",
           scrolled ? "opacity-100 ease-in" : "opacity-100 ease-out",
         )}
       >

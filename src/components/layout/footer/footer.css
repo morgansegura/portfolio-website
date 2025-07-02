@@ -1,5 +1,5 @@
 @reference "tailwindcss";
 
 .footer {
-  @apply py-4 text-sm text-right bg-neutral-700 text-neutral-50;
+  @apply py-4 text-base font-medium text-right bg-neutral-700 text-neutral-50;
 }

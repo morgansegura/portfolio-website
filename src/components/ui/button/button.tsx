@@ -49,7 +49,6 @@ export function Button({
       className={cn("button", className)}
       target={target}
       href={href ?? ""}
-      scroll={false}
       data-button-invert={invert}
       data-button-variant={variant}
     >
