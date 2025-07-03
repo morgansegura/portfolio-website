@@ -34,7 +34,7 @@
     @apply max-w-60;
   }
   [data-typography-variant="description"] p {
-    @apply bg-(--section-bg-accent)/60 pb-2 pl-2 -ml-2;
+    @apply bg-(--section-bg-accent)/75 pb-2 pl-2 -ml-2;
   }
 }
 

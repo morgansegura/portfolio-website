@@ -20,8 +20,8 @@ export const HEADER_MOCK: HeaderBlockMockProps = {
     },
     {
       href: "#contact",
-      children: "Reach out to me by email to collaborate on a project.",
-      title: "Contact",
+      children: "Contact",
+      title: "Reach out to me by email to collaborate on a project.",
       variant: "unstyled",
     },
     // {

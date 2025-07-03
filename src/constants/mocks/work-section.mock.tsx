@@ -134,7 +134,7 @@ export const WORK_SECTION_MOCK: WorkSectionProps = {
           kicker: "Metrics Intensive",
           heading: "Data modeling and representation.",
           description:
-            "The Ripe Metrics app consumes and visually represents personal secure data at scale.",
+            "The Ripe Metrics app consumes and visually represents personal, secure data at scale.",
           image: {
             priority: false,
             src: "/images/works-rm3.png",

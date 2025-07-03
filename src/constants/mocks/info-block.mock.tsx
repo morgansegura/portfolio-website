@@ -62,7 +62,7 @@ export const INFO_BLOCK_MOCK: InfoBlockProps = {
       __id: "2",
       heading: "Full Stack Development",
       description:
-        "With over a decade of experience across front-end and back-end systems, I develop scalable, maintainable applications thatbalance user needs with solid architecture and performance.",
+        "With over a decade of experience across front-end and back-end systems, I develop scalable, maintainable applications that balance user needs with solid architecture and performance.",
       icon: <MonitorSmartphoneIcon className="fill-indigo-300" />,
     },
   ],

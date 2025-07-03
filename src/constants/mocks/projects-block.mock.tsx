@@ -28,9 +28,9 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
   cards: [
     {
       __id: "0",
-      heading: "Project: Nations of Stone Trilog",
+      heading: "Project: Nations of Stone Trilogy",
       description:
-        " Created a Single Page Application (SPA) for my good friend author LeSean Johonson, author of the incredible Nations of Stone Trilogy. He wanted a Wordpress website built from scratch and needed it in a hurry. I was able to create the SPA in a couple of days, and get it up in time for Book One's release.",
+        "Created a Single Page Application (SPA) for my good friend author LeSean Johonson, author of the incredible Nations of Stone Trilogy. He wanted a Wordpress website built from scratch and needed it in a hurry. I was able to create the SPA in a couple of days, and get it up in time for Book One's release.",
       image: {
         src: "/images/projects-alj.jpg",
         alt: "Author LeSean Johnson",
@@ -48,7 +48,7 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
       __id: "1",
       heading: "Project: Chula Vista Fúbol Club",
       description:
-        "Pro bono web reconstruction. New S.E.O and marketing campaign, website refresh and architecture overhaul. This is currently a Wordpress website, however I am nearly finished creating a custom CMS built with Nest.js and Next.js to replace it.",
+        "Pro bono web reconstruction. New S.E.O, and marketing campaign, website refresh and architecture overhaul. This is currently a Wordpress website, however I am nearly finished creating a custom CMS built with Nest.js and Next.js to replace it.",
       tag: "Coming Soon",
       image: {
         src: "/images/projects-cvfc.jpg",
@@ -69,7 +69,7 @@ export const PROJECTS_BLOCK_MOCK: ProjectBlockMovckProps = {
       __id: "2",
       heading: "Project: Grass Roots Foundation",
       description:
-        'A work inprogress. Grass Roots Foundation is a Nonprofit my wife and I started to help youth soccer players in underserved communities get access to fields, equipment and elite soccer training. At the moment there is a landing page, however I will be build a website with all of the "bells and whistles."',
+        'A work in progress. Grass Roots Foundation is a nonprofit business that my wife and I started to help youth soccer players in underserved communities get access to fields, equipment and elite soccer training. At the moment there is simply a landing page, however I will be building a website with all of the "bells and whistles."',
       tag: "Work in Progress",
       image: {
         src: "/images/projects-grf.jpg",

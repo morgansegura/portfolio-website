@@ -47,10 +47,10 @@
 
 .section-title {
   @apply relative block font-medium text-lg tracking-tight uppercase mb-12
-  after:content-[''] after:absolute after:-bottom-px after:h-px after:inset-x-0 after:bg-linear-to-r after:from-neutral-400 after:via-neutral-300 after:to-neutral-200/25;
+  after:content-[''] after:absolute after:-bottom-px after:h-px after:inset-x-0 after:bg-linear-to-r after:from-neutral-600 after:via-neutral-700 after:to-neutral-800/25;
 
   span {
-    @apply py-1 px-2 text-white font-semibold bg-(--section-bg-accent) rounded-t-sm;
+    @apply py-1 px-2 text-white font-semibold bg-neutral-600 rounded-t-sm;
   }
 }
 

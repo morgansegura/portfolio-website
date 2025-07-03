@@ -21,8 +21,8 @@ export const LANDING_PAGE_MOCK: LandingPageProps[] = [
   {
     __sectionId: "works",
     sectionTheme: "dark",
+    sectionTitle: "Works",
     sectionClassName: "works-section",
-    sectionTitle: "",
     buffer: { top: true, bottom: true },
   },
   {
